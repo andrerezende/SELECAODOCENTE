@@ -13,8 +13,9 @@ require_once("../classes/Inscrito.php");
 require_once("../classes/Campus.php");
 require_once("../classes/Localprova.php");
 
-$cpf = addslashes($_POST['cpf']);
-$senha = addslashes($_POST['pwd']);
+$cpf 		= addslashes($_POST['cpf']);
+$senha 	= addslashes($_POST['pwd']);
+$mensagem 	= addslashes($_POST['mensagem']);
 
 /* Acesso ao banco de dados */
 $banco = DB::getInstance();
@@ -62,6 +63,10 @@ if (count($objinscrito)==0){
 		<p>
 		<div id="tituloPrincipal" align="center" style="width: 820px">Op&ccedil;&otilde;es do Inscrito</div>
 		<div class="conteudoColunaMeio" style="width: 820px; line-height: 25px">
+			<?php	if (isset($mensagem) && ($mensagem=="0") ){ ?>
+					<div aligne='center'>Ficha de Inscri&ccedil;&atilde;o preenchida com  sucesso. N&uacute;mero do CPF (<b><?php echo ($cpf);?></b>) <br />
+					</div>
+			<?php	} ?>
 			<div align="center">
 				<form id="frmeditar" name="frmeditar" action="<?php echo($pagina_editar)?>" method="post">
 					<input type="hidden" name="id" value="<?php echo($id);?>" />

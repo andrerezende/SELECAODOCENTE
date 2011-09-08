@@ -168,7 +168,6 @@ if (count($objinscrito) == 0) {
 					<input style="text-transform:uppercase" name="estadocivil" id="estadocivil" disabled="true" type="text" tabindex=21 alt="Estado Civil" value="<?php echo ($objinscrito[0]->getestadocivil()); ?>"/>
 				</td>
 			</tr>
-
 			<tr>
 				<td align='right'><label for=responsavel>Respons&aacute;vel:</label></td>
 				<td>
@@ -214,32 +213,28 @@ if (count($objinscrito) == 0) {
 				<input style="text-transform:uppercase" name="campus" id="campus" disabled="true" type="text" tabindex=23 value="<?php echo ($nomeLocalprova); ?>" />
 			</td>
 		</tr>
-
         <tr>
             <td height="28" align='right'><label for=isencao>Solicita Isen&ccedil;&atilde;o de Taxa?</label></td>
             <td>
                 <input name="isencao" id="isencao" disabled="disabled" id="curso" tabindex=26 size="3" value="<?php echo ($objinscrito[0]->getisencao()); ?>" />
             </td>
         </tr>
-
 		<tr>
 			<td height="28" align='right'><label for=nis>Cadastro &Uacute;nico (NIS):</label></td>
 			<td>
 				<input name="nis" id="nis" disabled="true" tabindex="28" type="text" size="15" maxlength="11" OnKeyPress="javascript:return Onlynumber(event);" alt="Cadastro &Uacute;nico (NIS)" value="<?php echo($objinscrito[0]->getnis()); ?>" />
 			</td>
 		</tr>
-
 		<tr>
 			<td height="28" align='right'><label for=especial>Necessidade Especial:</label></td>
 			<td>
 				<input style="text-transform:uppercase" name="especial" id="especial" disabled="true" type="text" tabindex=23 value="<?php echo ($objinscrito[0]->getespecial()); ?>" />
-
 				<label for=especial_descricao>Outra: </label>
 				<input style="text-transform:uppercase" name="especial_descricao" type="text" id="especial_descricao" disabled="true" tabindex=24 size='40' maxlength="40" alt="Qual deficiência?" value="<?php echo ($objinscrito[0]->getespecial_descricao()); ?>" />
 			</td>
 		</tr>
-
-        <tr>
+        
+		<tr>
             <td height="28" align='right'><label for=especial_prova>Condi&ccedil;&otilde;es especiais para realiza&ccedil;&atilde;o da prova:</label></td>
             <td>
                 <input style="text-transform:uppercase" name="especial_prova" id="especial_prova" disabled="disabled" id="especial_prova" tabindex=27 size="3" value="<?php echo ($objinscrito[0]->getespecialprova()); ?>" />
@@ -247,7 +242,6 @@ if (count($objinscrito) == 0) {
                 <input style="text-transform:uppercase" name="especial_prova_descricao" disabled="disabled" id="especial_prova_descricao" tabindex=28 size='40' value="<?php echo ($objinscrito[0]->getespecialprovadescricao()); ?>" />
             </td>
         </tr>
-
         <tr>
             <td height="28" align='right'><label for=vaga_especial>Concorre &agrave;s vagas destinadas a candidatos com Necessidades Especiais:</label></td>
             <td>
